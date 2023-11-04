@@ -19,7 +19,7 @@ The authors describe a new training methodology for generative adversarial netwo
 
 ## Dataset
 
-The dataset can be obtained ![here](https://www.kaggle.com/lamsimon/celebahq)
+The dataset can be obtained [here](https://www.kaggle.com/lamsimon/celebahq)
 
 ## Results
 
