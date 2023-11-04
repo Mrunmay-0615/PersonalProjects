@@ -7,6 +7,7 @@ This repository contains my personal project to create an unpaired domain transl
 
 - [Overview](#overview)
 - [Details](#details)
+- [Datasets](#datasets)
 - [Results](#results)
 - [References](#references)
 
@@ -19,7 +20,6 @@ Image-to-image translation is a class of vision and graphics problems where the 
 
 ![Model Architecture](assets/architecture.png)
 
-## Results from the paper
 
 Here are some of the results obtained in the original paper.
 ![Paper Results](assets/results.png)
