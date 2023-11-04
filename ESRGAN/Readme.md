@@ -7,12 +7,12 @@ This repository contains my custom implementation of the Enhanced SuperResolutio
 
 - [Overview](#overview)
 - [Details](#details)
-- [Dataset](#dataset)
 - [Results](#results)
+- [Citation](#citation)
 
 ## Overview
 
-Here is the abstract presented by the authors in the paper
+Here is the abstract presented by the authors in the paper. The paper can be found [here](https://arxiv.org/abs/1809.00219)
 
 The Super-Resolution Generative Adversarial Network (SRGAN) is a seminal work that is capable of generating realistic textures
 during single image super-resolution. However, the hallucinated details
@@ -32,11 +32,19 @@ than SRGAN and won the first place in the PIRM2018-SR Challenge1
 
 ![Model Training Scheme](assets/training.png)
 
-
 ## Results
 
 Here are some of the results obtained
-![Results](results/64_examples.png)
+![Results](saved/baboon_LR.png)
+The results presented were obtained by loading a pretrained model
 
-Some additional computational resources, and some hyperparameter tuning, might improve the quality of results obtained.
+## Citation
+
+@InProceedings{wang2018esrgan,
+    author = {Wang, Xintao and Yu, Ke and Wu, Shixiang and Gu, Jinjin and Liu, Yihao and Dong, Chao and Qiao, Yu and Loy, Chen Change},
+    title = {ESRGAN: Enhanced super-resolution generative adversarial networks},
+    booktitle = {The European Conference on Computer Vision Workshops (ECCVW)},
+    month = {September},
+    year = {2018}
+}
 
