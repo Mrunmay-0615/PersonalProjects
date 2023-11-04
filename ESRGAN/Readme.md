@@ -8,13 +8,13 @@ This repository contains my custom implementation of the Enhanced SuperResolutio
 - [Overview](#overview)
 - [Details](#details)
 - [Results](#results)
-- [Citation](#citation)
+- [References](#references)
 
 ## Overview
 
 Here is the abstract presented by the authors in the paper. The paper can be found [here](https://arxiv.org/abs/1809.00219)
 
-The Super-Resolution Generative Adversarial Network (SRGAN) is a seminal work that is capable of generating realistic textures
+The Super-Resolution Generative Adversarial Network (SRGAN) is a seminal work that is capable of generating realistic textures
 during single image super-resolution. However, the hallucinated details
 are often accompanied with unpleasant artifacts. To further enhance the
 visual quality, we thoroughly study three key components of SRGAN –
@@ -36,19 +36,23 @@ than SRGAN and won the first place in the PIRM2018-SR Challenge1
 
 Here are some of the results obtained
 
-<img src="saved/baboon_LR.png" width="256" height="256">
-<img src="saved/butterfly_LR.png" width="256" height="256">
-<img src="saved/baby_LR.png" width="256" height="256">
+<table>
+    <tr>
+        <td><img src="saved/baboon_LR.png" width="256" height="256"></td>
+        <td><img src="saved/butterfly_LR.png" width="256" height="256"></td>
+        <td><img src="saved/baby_LR.png" width="256" height="256"></td>
+    </tr>
+</table>
 
 The results presented were obtained by loading a pretrained model
 
-## Citation
-
-@InProceedings{wang2018esrgan,
+## References
+```
+@InProceedings {wang2018esrgan,
     author = {Wang, Xintao and Yu, Ke and Wu, Shixiang and Gu, Jinjin and Liu, Yihao and Dong, Chao and Qiao, Yu and Loy, Chen Change},
     title = {ESRGAN: Enhanced super-resolution generative adversarial networks},
     booktitle = {The European Conference on Computer Vision Workshops (ECCVW)},
     month = {September},
     year = {2018}
 }
-
+```
