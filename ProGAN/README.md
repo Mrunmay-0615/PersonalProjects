@@ -5,15 +5,9 @@ This repository contains my custom implementation of the Progressive GAN (ProGAN
 ## Table of Contents
 
 - [Overview](#overview)
-- [Modifications](#modifications)
-- [Results](#results)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
+- [Details](#details)
 - [Dataset](#dataset)
-- [Training](#training)
-- [Evaluation](#evaluation)
-- [Contributing](#contributing)
-- [License](#license)
+- [Results](#results)
 
 ## Overview
 
@@ -23,23 +17,15 @@ The authors describe a new training methodology for generative adversarial netwo
 
 ![Model Training Scheme](images/training.png)
 
+## Dataset
+
+The dataset can be obtained ![here](https://www.kaggle.com/lamsimon/celebahq)
+
 ## Results
 
 Here are some of the results obtained
 ![Results](results/64_examples.png)
 
-### Performance Metrics
+Some additional computational resources, and some hyperparameter tuning, might improve the quality of results obtained.
 
-If applicable, include metrics and evaluation results:
 
-- PSNR (Peak Signal-to-Noise Ratio)
-- SSIM (Structural Similarity Index)
-- FID (Frechet Inception Distance)
-- Other relevant metrics
-
-## Getting Started
-
-Provide detailed instructions on how to set up and run your customized ProGAN. Include installation steps, prerequisites, and any additional setup requirements.
-
-```bash
-# Installation instructions
