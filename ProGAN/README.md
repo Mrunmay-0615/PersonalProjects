@@ -1,36 +1,45 @@
-# ProGAN
-A clean, simple and readable implementation of ProGAN in PyTorch. I've tried to replicate the original paper as closely as possible, so if you read the paper the implementation should be pretty much identical. The results from this implementation I would say is close to the paper, but I did not train it to 1024x1024 images because I found it took too long. I also did not use number of channels = 512, but instead made the model smaller so that would be something that could worsen the results. I'll include some examples results below.
+# Custom ProGAN Implementation
+
+This repository contains my custom implementation of the Progressive GAN (ProGAN) with tailored modifications in hyperparameters (because I don't have superfast GPUs). ProGAN is renowned for its progressive training strategy that enables the generation of high-resolution images with remarkable quality.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Modifications](#modifications)
+- [Results](#results)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Dataset](#dataset)
+- [Training](#training)
+- [Evaluation](#evaluation)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+The authors describe a new training methodology for generative adversarial networks. The key idea is to grow both the generator and discriminator progressively: starting from a low resolution, they add new layers that model increasingly fine details as training progresses. This both speeds the training up and greatly stabilizes it, allowing us to produce images of unprecedented quality, e.g., CelebA images at 1024^2. They also propose a simple way to increase the variation in generated images, and achieve a record inception score of 8.80 in unsupervised CIFAR10. Additionally, they describe several implementation details that are important for discouraging unhealthy competition between the generator and discriminator. Finally, they suggest a new metric for evaluating GAN results, both in terms of image quality and variation. As an additional contribution, they construct a higher-quality version of the CelebA dataset.
+
+## Details
+
+![Model Training Scheme](images/training.png)
 
 ## Results
-||
-|:---:|
-|![](results/result1.png)|
-|![](results/64_examples.png)|
 
+Here are some of the results obtained
+![Results](results/64_examples.png)
 
-### Celeb-HQ dataset
-The dataset can be downloaded from Kaggle: [link](https://www.kaggle.com/lamsimon/celebahq).
+### Performance Metrics
 
-### Download pretrained weights
-Download pretrained weights [here](https://github.com/aladdinpersson/Machine-Learning-Collection/releases/download/1.0/ProGAN_weights.zip).
+If applicable, include metrics and evaluation results:
 
-Extract the zip file and put the pth.tar files in the directory with all the python files. Make sure you put LOAD_MODEL=True in the config.py file.
+- PSNR (Peak Signal-to-Noise Ratio)
+- SSIM (Structural Similarity Index)
+- FID (Frechet Inception Distance)
+- Other relevant metrics
 
-### Training
-Edit the config.py file to match the setup you want to use. Then run train.py
+## Getting Started
 
-## ProGAN paper
-### Progressive Growing of GANs for Improved Quality, Stability, and Variation by Tero Karras, Timo Aila, Samuli Laine, Jaakko Lehtinen
+Provide detailed instructions on how to set up and run your customized ProGAN. Include installation steps, prerequisites, and any additional setup requirements.
 
-#### Abstract
-We investigate conditional adversarial networks as a general-purpose solution to image-to-image translation problems. These networks not only learn the mapping from input image to output image, but also learn a loss function to train this mapping. This makes it possible to apply the same generic approach to problems that traditionally would require very different loss formulations. We demonstrate that this approach is effective at synthesizing photos from label maps, reconstructing objects from edge maps, and colorizing images, among other tasks. Indeed, since the release of the pix2pix software associated with this paper, a large number of internet users (many of them artists) have posted their own experiments with our system, further demonstrating its wide applicability and ease of adoption without the need for parameter tweaking. As a community, we no longer hand-engineer our mapping functions, and this work suggests we can achieve reasonable results without hand-engineering our loss functions either.
-```
-@misc{karras2018progressive,
-      title={Progressive Growing of GANs for Improved Quality, Stability, and Variation}, 
-      author={Tero Karras and Timo Aila and Samuli Laine and Jaakko Lehtinen},
-      year={2018},
-      eprint={1710.10196},
-      archivePrefix={arXiv},
-      primaryClass={cs.NE}
-}
-```
+```bash
+# Installation instructions
