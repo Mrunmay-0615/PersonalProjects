@@ -36,9 +36,9 @@ than SRGAN and won the first place in the PIRM2018-SR Challenge1
 
 Here are some of the results obtained
 
-![Results](saved/baboon_LR.png) ![Results](saved/butterfly_LR.png) ![Results](saved/baby_LR.png)
 <img src="saved/baboon_LR.png" width="256" height="256">
-
+<img src="saved/butterfly_LR.png" width="256" height="256">
+<img src="saved/baby_LR.png" width="256" height="256">
 
 The results presented were obtained by loading a pretrained model
 
