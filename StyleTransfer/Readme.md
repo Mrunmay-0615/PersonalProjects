@@ -6,13 +6,29 @@ However, for many tasks, paired training data will not be available. The authors
 
 ### Table of Contents
 
+- [Results](#result)
+- [Setup](#setup)
 - [Model Architecture](#model-architecture)
 - [Objective](#objective)
 - [Dataset](#dataset)
 - [Training](#training)
-- [Style Adaptation](#style-adaptation)
 - [Evaluation](#evaluation)
 - [Deliverables](#deliverables)
+
+### Results
+
+Here are some of the results obtained
+
+
+
+### Setup
+
+1. Clone the repository and cd into the repository
+    ```
+    git clone https://github.com/your-username/your-repository.git
+    
+    cd your-repository
+    ```
 
 ### Model  Architecture
 
@@ -50,4 +66,14 @@ I chose the following set of hyperparameters for training.
 * Lambda_identity - 5 (The relative weight of identity loss in the total loss)
 * Lambda_cycle - 10 (The relative weight of the cycle-consistency loss in the total loss)
 * Epochs - 100
+
+### Evaluation
+
+To evaluate content preservation, I am using the Structural Similiarity Imdex (SSIM score) which assesses the visual quality of an image by comparing its structural information, luminance, and contrast to a reference image. 
+I have borrowed the implementation for SSIM score from [here](https://github.com/VainF/pytorch-msssim/blob/master/pytorch_msssim)
+
+To evaluate style transfer, I will use the discriminator's accuracy. If the style transfer is very good, the accuracy should be close to 50% as 
+the discriminator will find it difficult to classify whether the image is synthetic or an actual Vangogh artwork.
+
+I evaluated the model on a test set of around 2000 images. The following metrics were obtained.
 
